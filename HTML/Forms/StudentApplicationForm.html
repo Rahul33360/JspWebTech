@@ -7,7 +7,7 @@
 </head>
 <body>
     <fieldset>
-        <legend>StudentApplicationForm</legend>
+        <legend style="font-size: 30px;"><b>Student Application Form</b></legend>
         <form action="">
             <label for="fname">First Name : </label>
             <input type="text" name="fname" id="fname" maxlength="30">
@@ -69,13 +69,15 @@
             
             <label for="Sketching">Sketching</label>
             <input type="checkbox" name="" id="Sketching">
-
+            <br><br>
             <label for="Others">Others : </label>
+            <input type="checkbox" name="" id="Others">
             <input type="text" name="" id="Others">
 
             <br><br>
-            <b>QUALIFICATION </b>
-            <table cellspacing="2" cellpadding="10">
+            <b>QUALIFICATION DETAILS : </b> 
+            <br><br>
+            <table cellspacing="2" cellpadding="5">
                 <tr>
                     <th>S.no</th>
                     <th>Examination</th>
@@ -86,33 +88,53 @@
                 <tr>
                     <td>1</td>
                     <td>Class X </td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Class XII </td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Graduation</td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>Masters </td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                    <td><input type="text" name="" id="" value=""></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>(10 chars max)</td>
+                    <td>(upto 2 decimal place)</td>
+                    <td></td>
                 </tr>
             </table>
+
+            <label>Course Applied For </label>
+            <span> : </span>
+            <label for="bca">BCA </label>
+            <input type="radio" name="" id="bca" value="bca">
+            <label for="b.sc">B.SC</label>
+            <input type="radio" name="" id="b.sc" value="b.sc">
+            <label for="b.a.">B.A.</label>
+            <input type="radio" name="" id="b.a." value="b.a.">
             
+            <br><br>
+            <input style="margin-left: 80px;" type="submit" value="submit">
+            <input style="margin-left: 40px;" type="reset" name="" id="">
+
         </form>
     </fieldset>
 </body>
