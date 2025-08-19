@@ -1,0 +1,11 @@
+div p{
+    background-color: rgb(205, 150, 68);
+    color: rgb(226, 218, 186);
+}
+
+div>h2{
+    background-color: brown;
+    color: cadetblue;
+    width: 200px;
+
+}

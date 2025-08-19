@@ -1,0 +1,28 @@
+.name {
+    color: blueviolet;
+    background-color: blanchedalmond;
+    height:100px;
+    width: auto;
+}
+
+#name {
+    color: rgb(140, 177, 16);
+    background-color: rgb(154, 127, 86);
+    font-size: 25px;
+    height: 150px;
+    width: auto;
+}
+
+.san {
+    color:rgb(195, 8, 117);
+    background-color: cadetblue;
+    height: 120px;
+    width: auto;
+}
+
+.cs,#as,div {
+    color: blueviolet;
+    background-color: rgb(221, 170, 170);
+    font-size: larger;
+    height: 40px;
+}
