@@ -3,63 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iphone</title>
+    <link rel="stylesheet" href="../../fontawesome-free-7.0.0-web/css/font-awesome.min.css">
     <style>
-
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            /* background-color: #E5E5E5; */
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 100px;
+        }
+        .card2{
+            padding: 15px;
+            margin-top: -10px;
+            height: 600px;
+            width: 400px;
+        }
+        .Item-details{
+            font-size: larger;
+            font-weight: 900;
+            font: 1.4em sans-serif;
+            margin-bottom: 4px;
+        }
+        a{
+            text-decoration: none;
+            color: #0000FF;
+        }
+        a:visited{
+            color: #800080 ;
+        }
+        a:hover{
+            color: plum;
+        }
+        .rating{
+            display: flex;
+            padding: 1px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-right: auto;
+        }
+        .ratingNumber{
+            margin-left: 23px;
+            /* color: #0000FF; */
+            font-size: smaller;
+        }
+        .star{
+            height: 15px;
+            /* width: 90px; */
+        }
+        .pastmonth{
+            font-size: 13px;
+            padding: 1px;
+            margin-bottom: 5px;
+            margin-right: auto;
+        }
+        .straightLine{
+            border: 1px solid darkgray;
+            border-radius: 100%;
+            margin-bottom: 15px;
+        }
+        .amount{
+            display: flex;
+            font-size: 27px;
+        }
+        .discount{
+            color: rgb(234, 72, 72);
+            margin-right: 15px;
+            font-weight:lighter;
+        }
+        .MRP{
+            font-size: 12px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-right: auto;
+        }
+        .lineThrough{
+            text-decoration: line-through;
+            /* margin-top: 5px; */
+            margin-bottom: 2px;
+        }
+        .taxes{
+            font-size: smaller;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+        .emi{
+            display: flex;
+            font-size: 14px;
+        }
+        .bemi{
+            font-weight: bolder;
+            
+        }
+        .op{
+            display: flex;
+        }
+        .ofe{
+            height: 40px;
+            margin-top: 10px;
+            margin-bottom: 2px;    
+            padding-left: 0;
+            padding-bottom: 3px;
+        }
+        .of{
+            margin-top: 16px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 25px;
+        }
+        .offerbox{
+            display: flex;
+            margin-top: 8px;
+            margin-bottom: 5px;
+        }
+        .offerBox-1,.offerBox-2,.offerBox-3{
+            border: 1px solid rgb(171, 170, 170);
+            border-radius: 10px;
+            margin-right: 4px;
+            margin-left: 0px;
+            padding: 10px;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .cashbold{
+            display: inline-block;
+            width: 100px;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+        .blueemi{
+            margin-left: 10px;
+        }
+        .services{
+            display: flex;
+            font-size: small;
+            color: rgb(70, 70, 189);
+            justify-content: space-between;
+        }
+        .servicesDetails{
+            border: 1px solid white;
+            padding: 2px;
+            height: 100px;
+            width: 90px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .values{
+            height: 70px;
+            width: 80px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="card">
-            <img src="" alt="">
+        <div class="card1">
+            <img src="./iphone.jpg" alt="">
         </div>
-        <div class="card">
-            <div class="Item details">
-
+        <div class="card2">
+            <div class="Item-details">
+                iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Ultramarine
             </div>
-            <a href="http://">Visit the Apple Store</a>
+            <a href="https://www.amazon.in/">Visit the Apple Store</a>
             <div class="rating">
-                <img class="star" src="" alt="">
-                <img class="arrow" alt="">
-                <div class="ratingNumber"></div>
+                <img class="star" src="./rating.jpg" alt="#8377">
+                <a class="ratingNumber" href="https://www.amazon.in/">1,270 ratings</a>
             </div>
             <div class="pastmonth">
-
+                <b>500+ bought</b> in past month
             </div>
             <div class="straightLine"></div>
             <div class="amount">
-                <div class="discount"></div>
-                <div class="currentAmount"></div>
+                <div class="discount">
+                    <!-- <i class="fa-duotone fa-light fa-9"></i> -->
+                     -9%
+                </div>
+                <div class="currentAmount"> &#8377 72,499</div>
             </div>
             <div class="MRP">M.R.P. : 
                 <span class="lineThrough">&#8377 79,990</span> 
             </div>
-            <div class="txes">Inclusive of all taxes</div>
-            <div>
-                <span>EMI</span>
-                <div>starts at ₹3,498. No Cost EMI available
+            <div class="taxes">Inclusive of all taxes</div>
+            <div class="emi">
+                <div>
+                    <b class="bemi">EMI</b>
+                 starts at ₹3,498. No Cost EMI available 
+                    <a class="blueemi" href="https://www.amazon.in/">EMI options</a>
                 </div>
-                <a href="#">EMI Options</a>
             </div>
             <div class="offers">
-                <div class="offerBox-1">
-                    <span>No Cost EMI</span>
-                        Upto ₹3,264.52 EMI interest savings on select Credit Cards, Bajaj Finserv.
+                <div class="op">
+                    <img class="ofe" src="./percent.jpg" alt=""> <span class="of">Offers</span> 
+                </div >
+                <div class="offerbox">
+                    <div class="offerBox-1">
+                        <span class="cashbold">Bank Offer</span>
+                            Upto ₹3,264.52 EMI interest savings on select Credit Cards, Bajaj Finserv.
+                    </div>
+                    <div class="offerBox-1">
+                        <span class="cashbold">No Cost EMI</span>
+                            Upto ₹3,264.52 EMI interest savings on select Credit Cards, Bajaj Finserv.
+                        </div>
+                    <div class="offerBox-1">
+                        <span class="cashbold">Cashback</span>
+                            Upto ₹3,264.52 EMI interest savings on select Credit Cards, Bajaj Finserv.
+                    </div>
                 </div>
-                <div class="offerBox-1">
-                    <span>Bank Offer</span>
-                        Upto ₹3,264.52 EMI interest savings on select Credit Cards, Bajaj Finserv.
-                </div>
-                <div class="offerBox-1">
-                    <span>Cashback</span>
-                        Upto ₹3,264.52 EMI interest savings on select Credit Cards, Bajaj Finserv.
-                </div>
-            </div>
             <div class="services">
-                <div class="servicesDetails"><img src="" alt="">10 days Service Centre Replacement</div>
-                <div class="servicesDetails"><img src="" alt="">Free Delivery</div>
-                <div class="servicesDetails"><img src="" alt=""> warrenty Policy</div>
-                <div class="servicesDetails"><img src="" alt="">Pay on Delivery</div>
+                <div class="servicesDetails"><img class="values" src="./icon-returns._CB562506492_.png" alt="">10 days Service Centre Replacement</div>
+                <div class="servicesDetails"><img class="values" src="./trust_icon_free_shipping_81px._CB562549966_.png" alt="">Free Delivery</div>
+                <div class="servicesDetails"><img class="values" src="./icon-warranty._CB485935626_.png" alt=""> Warrenty Policy</div>
+                <div class="servicesDetails"><img class="values" src="./icon-cod._CB562506657_.png" alt="">Cash/Pay on Delivery</div>
             </div>
         </div>
     </div>
