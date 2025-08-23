@@ -1,0 +1,13 @@
+div{
+    background-color: blueviolet;
+}
+
+div+p{
+    background-color: brown;
+    color: chartreuse;
+}
+
+div~p {
+    background-color: rgb(158, 135, 222);
+    color: purple;
+}

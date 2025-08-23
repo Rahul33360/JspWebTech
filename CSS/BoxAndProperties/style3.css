@@ -1,0 +1,117 @@
+/* *{
+    max-width: fit-content;
+    max-height: fit-content;
+} */
+
+.square1{
+    border-color: black;
+    background-color: rgb(17, 193, 178);
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 60px;
+    padding: 35px;
+    margin: 10px;
+}
+
+
+.square2{
+    border-color: black;
+    background-color: red;
+    border-style: solid;
+    border-width: 3px;
+    width: 960px;
+    height: 60px;
+    padding: 35px;
+    margin-left: 210px;
+    margin-top: -145px;
+}
+
+
+.square3{
+    /* border-color: black; */
+    background-color: rgb(17, 193, 178);
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 60px;
+    padding: 35px;
+    margin-left: 1265px;
+    margin-top: -135px;
+}
+
+
+.square4{
+    border-color: black;
+    background-color: red;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 380px;
+    padding: 35px;
+    margin: 10px;
+}
+
+.circle{
+    border-color: black;
+    background-color: olive;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    width: 200px;
+    height: 200px;
+    padding: 35px;
+    margin-left: 610px;
+    margin-top: -335px;
+    margin-bottom: 200px;
+}
+
+
+.square5{
+    border-color: black;
+    background-color: red;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 380px;
+    padding: 35px;
+    margin-left: 1265px;
+    margin-top: -605px;
+    margin-bottom: 200px;
+}
+
+.square6{
+    border-color: black;
+    background-color: rgb(17, 193, 178);
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 60px;
+    padding: 35px;
+    margin: 10px;   
+    margin-top: -190px;
+}
+
+.square7{
+    border-color: black;
+    background-color: red;
+    border-style: solid;
+    border-width: 3px;
+    width: 960px;
+    height: 60px;
+    padding: 35px;
+    margin-left: 210px;
+    margin-top: -143px;
+}
+
+.square8{
+    /* border-color: black; */
+    background-color: rgb(17, 193, 178);
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 60px;
+    padding: 35px;
+    margin-left: 1265px;
+    margin-top: -135px;
+}

@@ -1,0 +1,122 @@
+*{
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.circle1{
+    border-color: black;
+    background-color: burlywood;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 70px;
+    /* margin: 20px; */
+    border-radius: 50%;
+}
+
+.circle2{
+    border-color: black;
+    background-color: brown;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    /* margin: 15px; */
+    margin-left: 130px;
+    border-radius: 50%;
+}
+.circle3{
+    border-color: black;
+    background-color: purple;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    /* margin: 15px; */
+    margin-left: 270px;
+    border-radius: 50%;
+}
+
+.circle4{
+    border-color: black;
+    background-color: goldenrod;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    /* margin: 15px; */
+    margin-left: 410px;
+    border-radius: 50%;
+}
+
+.circle5{
+    border-color: black;
+    background-color: greenyellow;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    /* margin: 15px; */
+    margin-left: 550px;
+    border-radius: 50%;
+}
+
+.circle6{
+    border-color: black;
+    background-color: rebeccapurple;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    margin-top: -310px;
+    margin-left: 710px;
+    border-radius: 50%;
+    
+}
+
+.circle7{
+    border-color: black;
+    background-color: darkcyan;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 73px;
+    margin-top: -300px;
+    margin-left: 910px;
+    border-radius: 50%;
+    
+}
+
+.circle8{
+    border-color: black;
+    background-color: olive;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    margin-top: -310px;
+    margin-left: 1100px;
+    border-radius: 50%;
+}
+
+
+.circle9{
+    border-color: black;
+    background-color: orangered;
+    border-style: solid;
+    border-width: 3px;
+    width: 100px;
+    height: 100px;
+    padding: 75px;
+    margin-top: -310px;
+    margin-left: 1300px;
+    border-radius: 50%;
+}

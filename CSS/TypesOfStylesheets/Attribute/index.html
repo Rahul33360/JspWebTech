@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        p[class] {
+            background-color: brown;
+            font-size: 50px;
+        }
+        a[href='#'] {
+            font-size: 50px;
+            background-color: burlywood;
+        }
+        a[target='_blank'] {
+            font-size: 50px;
+            color: chartreuse;
+        }
+        p[id='abc2']{
+            font-size: 50px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <p>this is para one</p>
+    <p class="abc">this is para two</p>
+    <p id="abc2">this is para three</p>
+    <a href="" target="_blank">Link1</a>
+    <a href="" target="_self">Link2</a>
+    <a href="#">Link3</a>
+
+</body>
+</html>

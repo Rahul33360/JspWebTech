@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paa{
+            font-size: larger;
+            margin-top: 20px;
+        }
+        .paa::selection{
+            color: yellow;
+        }
+        .h2::first-letter{
+            font-size: larger;
+            color: blue;
+        }
+        .one{
+            font-size: 25px;
+        }
+        ul li::marker{
+            color: rgb(0, 255, 110);
+            content: '👍';
+        }
+
+    </style>
+</head>
+<body>
+    <div class="para">
+        <h2>Header 2</h2>
+        <p class="paa">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ab aperiam, alias pariatur mollitia aspernatur earum quidem rerum delectus? Pariatur praesentium dolore cumque quia qui nesciunt aspernatur debitis sapiente tenetur.</p>
+        <h2 class="h2">Header 2</h2>
+        <ul class="one">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+    </div>
+</body>
+</html>
