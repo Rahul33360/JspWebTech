@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fontawesome-free-7.0.0-web/css/all.min.css">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .top{
+            background-image: url("/Flex/PortfolioSample/back.jpg");
+            height: 300px;
+            min-width: 1450px;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #icon{
+            background-color: rgb(230, 228, 226);
+            border: 0px solid;
+            border-radius: 10px;
+            font-size: 33px;
+            margin-top: -40px;
+        }
+        /* .ic{
+            margin-left: 600px;
+        } */
+        .ic2{
+            margin-left: 8px;
+        }
+        .bar{
+            height: 40px;
+            width: 600px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+        .image{
+            margin-top: 4px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            width: 45px;
+            height: 40px;
+        }
+        .bar{
+            display: flex;
+            /* flex-direction: row; */
+            align-items: center;
+        }
+        .flex{
+            margin: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            /* color: rgb(196, 47, 196); */
+            color: #526875;
+            letter-spacing: 1px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform:uppercase;
+        }
+        .barlink1{
+            margin-left: 255px;
+            text-decoration: none;
+            color: rgb(107, 107, 107);
+            font-size: 12px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform:uppercase;
+        }
+        .barlink{
+            text-decoration: none;
+            color: rgb(107, 107, 107);
+            font-size: 12px;
+            margin-left: 10px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform:uppercase;
+        }
+        .barlink:hover,.barlink1:hover{
+            color: rgb(66, 65, 65);
+            font-weight: 600;
+        }
+        .studio{
+            text-transform: uppercase;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform:uppercase;
+            margin-top: 35px;
+            font-size: 24px;
+            color: beige;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+        .btn{
+            font-size: 14px;
+            padding: 10px;
+            color: beige;
+            border: 0px;
+            border-radius: 10px;
+            /* background-color: rgb(196, 47, 196); */
+            background-color: #526875;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform:uppercase;
+        }
+        .btn:hover{
+            background-color: #5f7e8e;
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .service{
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            margin-top: 30px;
+            font-size: 25px;
+            font-weight:lighter;
+            text-transform:uppercase;
+        }
+        .para{
+            font-weight:lighter;
+            font-size: small;
+            color: rgb(163, 163, 163);
+            margin-top: 10px;
+        }
+        .serviceIcon{
+            display: flex;
+            gap: 25px;
+            /* align-items: center;
+            justify-content: center; */
+            margin-top: 15px;
+        }
+        .icons{
+            height: 130px;
+            width: 130px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        .icons:hover{
+            scale: 1.1;
+        }
+        .ic1{
+            background-color: #96bdd4;
+        }
+        .ic2{
+            background-color: #afc9d9;
+        }
+        .ic3{
+            background-color: #cbd7de;
+        }
+        .ic4{
+            background-color: #d8dfe2;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div class="topIcons">
+                <i id="icon"  class="fab fa-facebook ic"></i>
+                <i id="icon" class="fa-brands fa-square-twitter ic2 "></i>
+                <i id="icon" class="fa-brands fa-square-linkedin ic2 "></i>
+                <i id="icon" class="fa-regular fa-envelope ic2 "></i>
+            </div>
+            <div class="bar">
+                <div><img class="image" src="./gtar.jpg" alt=""></div>
+                <div class="flex">Flex</div>
+                <div class="baritems">
+                    <a class="barlink1" href="http://">NEW</a>
+                    <a class="barlink" href="http://">SUPPORT</a>
+                    <a class="barlink" href="http://">TEAM</a>
+                    <a class="barlink" href="http://">CONTACT</a>
+                </div>
+            </div>
+            <div class="studio">Digital Studio</div>
+            <div><button class="btn" type="button">Download Template</button>
+            </div>
+        </div>
+        <div class="bottom">
+            <h3 class="service">Our Services</h3>
+            <p class="para">Lorem ipsum dolor sit Lorem, ipsum..</p>
+            <div class="serviceIcon">
+                <div class="icons ic1"><i class="fa-solid fa-bolt-lightning"></i></div>
+                <div class="icons ic2"><i class="fa-brands fa-telegram"></i></div>
+                <div class="icons ic3"><i class="fa-solid fa-house"></i></div>
+                <div class="icons ic4"><i class="fa-solid fa-flask"></i></div>
+            </div>
+            <!-- <h3 class="porfolio">Our Portfolio</h3> -->
+            <p class="portpara"></p>
+            <div class="cards">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
