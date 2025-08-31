@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Cards Grid</title>
+    <link rel="stylesheet" href="fontawesome-free-7.0.0-web/css/all.min.css">
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+        .header {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .tasks-count {
+            font-weight: 500;
+        }
+        .header .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 9px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            padding: 22px 18px 18px 18px;
+            position: relative;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card .credits {
+            font-size: 16px;
+            /* color: #b92b2b; */
+            color: rgb(62, 62, 62);
+            /* font-weight: bold; */
+            margin-bottom: 5px;
+        }
+        .card .title {
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card .category {
+            font-size: 12px;
+            color: #fff;
+            background: #e35562;
+            border-radius: 5px;
+            padding: 3px 9px;
+            font-weight: bold;
+            display: inline-block;
+            width:fit-content;
+            margin-bottom: 9px;
+        }
+        .category.integrations {
+            background: #2676c7;
+            display: inline;
+        }
+        .card .desc {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 18px;
+        }
+        .card .meta {
+            font-size: 12px;
+            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: auto;
+        }
+        .card .meta .avatars {
+            display: flex;
+            align-items: center;
+        }
+        .card .meta .avatars img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: -10px;
+            border: 2px solid #fff;
+            background: #ccc;
+        }
+        .card .meta .count {
+            margin-left: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .pagination button {
+            border: none;
+            background: #fff;
+            border-radius: 4px;
+            padding: 7px 13px;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: background 0.2s;
+        }
+        .pagination button.active {
+            background: #2676c7;
+            color: #fff;
+            font-weight: bold;
+        }
+        .filter{
+            border-radius: 3px 10px 10px 10px;
+            padding: 7px;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="tasks-count">Showing 291 tasks</div>
+            <div class="controls">
+            <span
+                >Sort by:
+                <a href="#" style="color: #2676c7; text-decoration: none">Most popular</a>
+                </span
+            >
+            <button class="filter">Filters <span><i class="fa-solid fa-flask"></i></span></button>
+            </div>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+            <div class="credits">1 credits</div>
+            <div class="title">
+                Be social - Sell your stock directly on instagram
+            </div>
+            <div class="category">Marketing & Sales</div>
+            <div class="desc">
+                Some kind of short descriptions can go here to better recommend
+                tasks.
+            </div>
+            <div class="meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 1 days ago</span>
+                <span class="avatars">
+                <img
+                    src="https://randomuser.me/api/portraits/men/45.jpg"
+                    alt="User" />
+                <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="User"
+                />
+                <span class="count">12</span>
+                </span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="credits">2 credits</div>
+            <div class="title">Increase confidence with trustpilot reviews</div>
+            <div class="category integrations">integrations</div>
+            <div class="desc">
+                Some kind of short descriptions can go here to better recommend
+                tasks.
+            </div>
+            <div class="meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 2 days ago</span>
+                <span class="avatars">
+                <img
+                    src="https://randomuser.me/api/portraits/women/29.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/men/28.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/men/27.jpg"
+                    alt="User"
+                />
+                <span class="count">16</span>
+                </span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="credits">1 credits</div>
+            <div class="title">
+                Be social - Sell your stock directly on instagram
+            </div>
+            <div class="category">Marketing & Sales</div>
+            <div class="desc">
+                Some kind of short descriptions can go here to better recommend
+                tasks.
+            </div>
+            <div class="meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 1 days ago</span>
+                <span class="avatars">
+                <img
+                    src="https://randomuser.me/api/portraits/men/45.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="User"
+                />
+                <span class="count">12</span>
+                </span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="credits">2 credits</div>
+            <div class="title">Increase confidence with trustpilot reviews</div>
+            <div class="category integrations">integrations</div>
+            <div class="desc">
+                Some kind of short descriptions can go here to better recommend
+                tasks.
+            </div>
+            <div class="meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 2 days ago</span>
+                <span class="avatars">
+                <img
+                    src="https://randomuser.me/api/portraits/women/29.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/men/28.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/men/27.jpg"
+                    alt="User"
+                />
+                <span class="count">16</span>
+                </span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="credits">1 credits</div>
+            <div class="title">
+                Be social - Sell your stock directly on instagram
+            </div>
+            <div class="category">Marketing & Sales</div>
+            <div class="desc">
+                Some kind of short descriptions can go here to better recommend
+                tasks.
+            </div>
+            <div class="meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 1 days ago</span>
+                <span class="avatars">
+                <img
+                    src="https://randomuser.me/api/portraits/men/45.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="User"
+                />
+                <span class="count">12</span>
+                </span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="credits">2 credits</div>
+            <div class="title">Increase confidence with trustpilot reviews</div>
+            <div class="category integrations">integrations</div>
+            <div class="desc">
+                Some kind of short descriptions can go here to better recommend
+                tasks.
+            </div>
+            <div class="meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 2 days ago</span>
+                <span class="avatars">
+                <img
+                    src="https://randomuser.me/api/portraits/women/29.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/men/28.jpg"
+                    alt="User"
+                />
+                <img
+                    src="https://randomuser.me/api/portraits/men/27.jpg"
+                    alt="User"
+                />
+                <span class="count">16</span>
+                </span>
+            </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button>&laquo;</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>&raquo;</button>
+        </div>
+    </div>
+</body>
+</html>
