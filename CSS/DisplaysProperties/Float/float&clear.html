@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: auto;
+            padding: 20px;
+            width: 900px;
+            background-color: olivedrab;
+            margin: auto;
+            border-radius: 25px;
+            font-size: 23px;
+            color: burlywood;
+            margin-top: 30px;
+        }
+        .parent{
+            /* background-color: brown; */
+            /* height: 600px; */
+            /* height: auto; */
+        }
+        
+        .main{
+            text-transform: uppercase;
+            height: auto;
+            padding: 5px;
+            width: 425px;
+            border: 1px solid black;
+            border-radius: 10px;
+            float: left;
+        }
+        
+        .sidebar{
+            text-transform: uppercase;
+            height: auto;
+            border: 1px solid black;
+            padding: 5px;
+            width: 425px;
+            float: right;
+            border-radius: 10px;
+            /* clear: left; */
+        }
+        .parent::after{
+            content: '';
+            display: block;
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Header here</h2>
+        <div class="parent">
+            <div class="main">
+                <h3>main</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis qui necessitat illum nam eveniet vero corrupti officia molestiae! Ducimus vero modi ea fuga. Eos dolorem, temporibus aperiam modi dignissimos totam incidunt non, officiis fugiat similique facilis quis eveniet cupiditate. Minus?</p>
+            </div>
+            <div class="sidebar">
+                <h3>sidebar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. dolorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vitae sequi repellat sapiente earum proviiste, laboriosam reprehenderit et illo voluptas est doloremque asperiores voluptatem. Lorem consectetur adipisicing elit. Nihil velit nobis, quod loribus aliquam in, unde nesciunt quos ratione atque tenetur nulla obcaecati! Cupiditate voluptates consectetur cumque sapiente sed a error quod.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
