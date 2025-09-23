@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn() {
+            let a=1;
+            var b=2;
+            const c=3;
+
+            function fn2() {
+                let d = 2;
+                if(d==2) {
+                    let e=1;
+                    var f=2;
+                    const g=3;
+                    console.log(e,f,g);
+                }
+                // console.log(e,g);   // error we can't acess because it's existence till the block they declaired
+                console.log(f); // for var it's existence till in the function it is declaired
+            }
+            // here we cannot acess f. because outside the fn2 function
+            // console.log(f);
+            // similarly for b also if any value is declaired using var it's scope will be till that function only
+            console.log(b);
+            fn2()
+        }
+        fn()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
