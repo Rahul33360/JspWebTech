@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj = {
+            name:'Rahul',
+            id:101,
+            bYear:2000,
+            calcAge:function() {
+                let date = new Date();
+                let year = date.getFullYear();
+                console.log(this);
+                // return year - obj.bYear; // below one is the same meaning
+                return year - this.bYear; 
+            }
+        }
+        console.log(obj.name);
+        // in the case of object this keyword will refer to its parent object
+        console.log(obj.calcAge());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
