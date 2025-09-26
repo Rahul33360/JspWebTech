@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let theater3 = {
+            tname:'game over',
+            tId:21
+        }
+        let theater2 = {
+            tname:'Harry Potter',
+            tId:21
+        }
+        let theater1 = {
+            tname:'near',
+            tId:21
+        }
+
+        let res = function(mname,seatno){
+            console.log(`${mname} is booked${this.tname} a ${seatno}`);
+        }
+
+        res.call(theater2,'leo',21);
+        res.apply(theater3,['og,12']);
+        let copy = res.bind()
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
