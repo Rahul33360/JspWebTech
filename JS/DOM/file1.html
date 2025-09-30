@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="h2cl">Rahul</h2>
+    <h2 id="h5"></h2>
+    <ol>
+        <li class="li-first">banana</li>
+        <li class="li-first">mango</li>
+        <li id="li-second">pet</li>
+        <li id="li-second">dog</li>
+    </ol>
+
+    <script>
+        let h2Ele = document.getElementsByClassName('.h2cl');
+        h2Ele.textContent = 'Hello man!';
+        
+        // console.log(h2Ele);
+        let h5Ele = document.getElementById('h5');
+        h5Ele.textContent = `What's up!`;
+
+        let tagName = document.getElementsByTagName('h2');
+        console.log(tagName);
+
+        let anySelector = document.querySelector('.li-first');
+        console.log(anySelector);
+        anySelector.textContent = 'one';
+        let anyAllSelector = document.querySelectorAll('#li-second');
+        // let anyAllSelector = document.querySelectorAll('li');
+        console.log(anyAllSelector);
+        // anyAllSelector.textContent = 'two';
+    </script>
+</body>
+</html>
