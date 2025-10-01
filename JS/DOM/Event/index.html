@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bgChange">
+        <span id="hi" style="color: blue; font-size: 40px;">This is Iniline Event</span>
+        <br>
+        <br>
+        <button onclick="eventHandler()" style="border-radius: 4px; background-color: rgb(205, 255, 234); font-size: 20px; border: none;">Button</button>
+        <br>
+        <br>
+        <span id="change"  style="color: blue; font-size: 40px;">Click on below Button!</span>
+        <br>
+        <br>
+        <button id="clickbtn" style="border-radius: 4px; background-color: rgb(205, 255, 234); font-size: 20px; border: none;" >Click Here </button>
+        <br>
+        <br>
+        <button id="bg" style="border-radius: 4px; background-color: rgb(205, 255, 234); font-size: 20px; border: none;">Click to change Background Color</button>
+        
+        <br>
+        <br>
+        <div style="font-size: 40px;">
+            Increment and Decrement
+        </div>
+        <br>
+        <br>
+
+        <button onclick="decrement()" style="border-radius: 4px; background-color: rgb(205, 255, 234); font-size: 40px; border: none;">-</button>
+        <span id="value" style="font-size: 40px;"> 0 </span>
+        <button onclick="increment()" style="border-radius: 4px; background-color: rgb(205, 255, 234); font-size: 40px; border: none;">+</button>
+    </div>
+    <script>
+        let hi = document.getElementById('hi');
+        function eventHandler() {
+            hi.textContent = 'This is Minecraft'
+        }
+        let click = document.getElementById('clickbtn');
+        let eventProp = document.getElementById('change');
+        click.onclick = function() {
+            eventProp.textContent = 'This is event Prop'
+        }
+
+        let bgC = document.getElementById('bg');
+        let bgChangeIt = document.getElementById('bgChangeIt')
+        bgC.onclick = function() {
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'purple';
+        }
+
+        // for increment and decrement
+
+        let val = document.getElementById('value')
+        let count = 0;
+        val.textContent=count;
+        function decrement() {
+            if(count > 0 ) {
+                --count;
+                val.textContent = count;
+                val.style.color='red'
+            }
+        }
+        function increment() {
+            count++;
+            val.textContent = count;
+            val.style.color='blue'
+        }
+    </script>
+
+</body>
+</html>
