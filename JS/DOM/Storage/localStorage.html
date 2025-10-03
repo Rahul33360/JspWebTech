@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local</title>
+  </head>
+  <body>
+    <script>
+      let Ename = "Rahul";
+      let Eage = 22;
+
+      localStorage.setItem("name", Ename);
+      localStorage.setItem("age", Eage);
+      // same thisng as above just another way to add it
+      localStorage.setItem("Lname", "Kumar");
+      localStorage.setItem("age", 32);
+
+      console.log(localStorage.getItem("name")); // for fetching
+      console.log(localStorage.getItem("age"));
+
+      // we can remove also from local storage
+      localStorage.removeItem("age");
+      console.log(localStorage.getItem("age")); // null we are getting
+
+    //   to clear all the data from the local storage 
+    //   localStorage.clear();
+      console.log(localStorage.getItem('name'));
+    </script>
+  </body>
+</html>

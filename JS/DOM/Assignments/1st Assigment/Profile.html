@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        /* background-color: lightgray; */
+        transition: background-color 0.8s ease;
+      }
+
+      #wrapper {
+        margin-top: 50px;
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #profileCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        width: 370px;
+        border: 2px solid grey;
+        padding: 10px 10px 10px 10px;
+        border-radius: 20px;
+        background-color:rgb(225, 225, 251);
+      
+    }
+      
+      #profilePic{
+        height: 400px;
+        width: 350px;
+        margin-top: 10px;
+        border-radius: 10px;
+        /* border: 2px solid gray; */
+        box-shadow: -2px 5px 4px 3px rgb(145, 145, 177);
+        background-color: lightgray;
+    }
+      .pic{
+        /* box-sizing: border-box; */
+        height: 400px;
+        width: 350px;
+        padding: 10px 11px 10px 8px;
+        border-radius: 20px;
+      }
+      #userName{
+        font-size: 38px;
+        align-self: flex-start;
+        margin-top: 10px;
+        color: rgb(119, 136, 153);
+      }
+      #reacts{
+        display: flex;
+        margin-top: 20px;
+        align-self: flex-start;
+        gap: 150px;
+      }
+      button{
+        padding: 10px;
+        font-size: 27px;
+        border-radius: 10px;
+        border: none;
+        color:lightslategray;
+        background-color:#b4b7ba;
+    }
+    #reactCnt{
+        display: flex;
+        margin-top: 10px;
+        gap: 215px;
+        margin-bottom: 10px;
+        color: lightslategray;
+      }
+      .tt{
+        display: flex;
+        margin-bottom: 14px;
+        gap: 40px;
+        /* align-self: flex-start; */
+        font-size: 40px;
+        color:lightslategray;
+        /* border: 1px solid gray; */
+        padding: 10px 60px 10px;
+        border-radius: 10px;
+        box-shadow: -2px 2px 9px 3px rgb(145, 145, 177);
+      }
+
+  </style>
+  <body>
+    <div id="wrapper">
+      <div id="profileCard">
+        <div id="profilePic">
+          <img class="pic" src="/image.png" alt="" />
+        </div>
+        <div id="userName"></div>
+        <div id="reacts">
+          <button onclick="like()">Likes</button>
+          <button onclick="dislike()">Dislikes</button>
+        </div>
+        <div id="reactCnt">
+          <span id="LikeCnt"></span>
+          <span id="DislikeCnt"></span>
+        </div>
+        <div class="tt">Total : <span id="totalCnt"></span></div>
+      </div>
+    </div>
+
+    <script>
+      let name = document.getElementById("userName");
+      let likes = document.getElementById("LikeCnt");
+      let dislikes = document.getElementById("DislikeCnt");
+      let total = document.getElementById("totalCnt");
+
+      name.textContent = "Rahul Kr.";
+
+      let Lcount = 0;
+      let Dcount = 0;
+      likes.textContent = Lcount;
+      dislikes.textContent = Dcount;
+      total.textContent = Lcount + Dcount;
+      
+      function like() {
+        ++Lcount;
+        likes.textContent = Lcount;
+        total.textContent = Lcount + Dcount;
+    }
+      function dislike() {
+        ++Dcount;
+        dislikes.textContent = Dcount;
+        total.textContent = Lcount + Dcount;
+      }
+
+    </script>
+  </body>
+</html>

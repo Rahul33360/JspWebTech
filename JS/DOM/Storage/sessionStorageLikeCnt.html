@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session</title>
+  </head>
+  <body>
+    <button id="btn">DisLike</button>
+    <span id="dis"></span>
+
+    <script>
+      let display = document.querySelector("#dis");
+      let button = document.querySelector("#btn");
+
+      let newCount = sessionStorage.getItem("newCount") || 0;
+      sessionStorage.setItem("newCount", newCount);
+
+      display.textContent = newCount;
+
+      button.addEventListener("click", function () {
+        --newCount;
+        display.textContent = newCount;
+        sessionStorage.setItem("newCount", newCount);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="likes">Likes</button>
+    <span id="display"></span>
+
+    <script>
+        let like = document.querySelector('#likes');
+        let dis = document.querySelector('#display');
+
+        let count =0;
+        dis.textContent = count;
+        like.addEventListener('click', function() {
+            ++count;
+            dis.textContent = count;
+        })
+
+    </script>
+</body>
+</html>
