@@ -123,21 +123,27 @@
 
       name.textContent = "Rahul Kr.";
 
-      let Lcount = 0;
-      let Dcount = 0;
+      let Lcount = localStorage.getItem('Lcount') || 0;
+      let Dcount = localStorage.getItem('Dcount') || 0;
+
+      localStorage.setItem('Lcount',Lcount);
+      localStorage.setItem('Dcount',Dcount)
+      
       likes.textContent = Lcount;
       dislikes.textContent = Dcount;
-      total.textContent = Lcount + Dcount;
+      total.textContent = Number(Lcount) + Number(Dcount);
       
       function like() {
         ++Lcount;
         likes.textContent = Lcount;
-        total.textContent = Lcount + Dcount;
+        localStorage.setItem('Lcount',Lcount);
+        total.textContent = Number(Lcount) + Number(Dcount);
     }
       function dislike() {
         ++Dcount;
         dislikes.textContent = Dcount;
-        total.textContent = Lcount + Dcount;
+        localStorage.setItem('Dcount',Dcount);
+        total.textContent = Number(Lcount) + Number(Dcount);
       }
 
     </script>

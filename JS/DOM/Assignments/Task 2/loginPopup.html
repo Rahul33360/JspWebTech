@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zeta</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      #navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+      }
+      img {
+        height: 90px;
+        width: auto;
+      }
+      #navBar button {
+        background: #43a047;
+        color: white;
+        border: none;
+        font-size: 20px;
+        padding: 8px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .popup {
+        display: none;
+      }
+
+      #login_popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 50px #8ac38d;
+        margin-top: 25px;
+        width: 350px;
+        height: 310px;
+        scale: 1.1;
+      }
+
+      #headPart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      #headPart span {
+        flex: 1;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      #cross {
+        font-size: 20px;
+        border: none;
+        box-shadow: 0 5px 7px #71b074;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: bold;
+        width: 35px;
+        height: 35px;
+        padding: auto;
+      }
+
+      label {
+        font-size: 14px;
+        margin-top: 10px;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 6px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+      }
+
+      input[type="checkbox"] {
+        transform: scale(1.2);
+      }
+
+      input[type="checkbox"]:hover {
+        scale: 1.1;
+      }
+      .showPass {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      #chkPsw {
+        margin-left: 4px;
+        padding-left: 2px;
+        margin-right: 8px;
+      }
+      .labPass {
+        padding-bottom: 9px;
+      }
+
+      .lastBtn {
+        margin-top: 10px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+      }
+
+      #login_popup button:hover {
+        background: #43a047;
+      }
+
+      .welcome {
+        justify-self: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: #43a047;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="navBar">
+        <span><img src="./image.png" alt="" /></span>
+        <button id="Log">Login</button>
+      </div>
+      <h2 class="welcome">Welcome</h2>
+      <div id="login_popup" class="popup">
+        <div id="headPart">
+          <span class="logHead">Login</span>
+          <button class="crs" id="cross">❌</button>
+        </div>
+        <form action="" method="post">
+          <label for="uname">UserName :</label>
+          <input type="text" id="uname" />
+          <br />
+          <label for="pass">Password :</label>
+          <input type="password" id="pass" />
+        </form>
+        <div class="showPass">
+          <input type="checkbox" name="check" id="chkPsw" />
+          <label class="labPass" for="chkPsw">Show Password</label>
+        </div>
+        <button id="star" class="lastBtn">Login</button>
+      </div>
+    </div>
+    <script>
+      let loginBtn = document.querySelector("#Log");
+      let loginContent = document.querySelector("#login_popup");
+      let crossBtn = document.querySelector("#cross");
+      let psw = document.querySelector("#pass");
+      let pswVisible = document.querySelector("#chkPsw");
+
+      function showPopup() {
+        loginContent.classList.remove("popup");
+      }
+
+      function hidePopup() {
+        loginContent.classList.add("popup");
+        document.querySelector("form").reset();
+      }
+
+      pswVisible.addEventListener("change", () => {
+        psw.type = pswVisible.checked ? "text" : "password";
+      });
+
+      loginBtn.addEventListener("click", showPopup);
+      crossBtn.addEventListener("click", hidePopup);
+
+      let makeStar = document.querySelector('#star')
+      let user = document.querySelector('#uname')
+      let passName = document.querySelector('#pass')
+
+      let starfn = function () {
+        user.value = '******************************'
+        passName.value = '***************************'
+      }
+      makeStar.addEventListener('click', starfn)
+
+    </script>
+  </body>
+</html>

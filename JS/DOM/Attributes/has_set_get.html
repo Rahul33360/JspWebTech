@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+    <style>
+        .text{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="hh" align="center" >Hey buddy !</h2>
+
+    <script>
+        let head = document.getElementById('hh');
+        let has1 = head.hasAttribute('id');
+        let has2 = head.hasAttribute('class'); 
+        console.log(has1);
+        console.log(has2);
+
+        head.setAttribute('class','text');
+        let get = head.getAttribute('class')
+        console.log(get);
+        let get2 = head.getAttribute('id');
+        console.log(get2);
+
+        // head.removeAttribute('align')    // it will remove the align attribute
+
+        let attr=head.attributes;
+        console.log(attr);
+        
+
+
+    </script>
+</body>
+</html>
