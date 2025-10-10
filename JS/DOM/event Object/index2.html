@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object from addEventListener</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form action="" id="form">
+            <label for="usn">UserName : </label>
+            <input type="text" name="" id="usn">
+            <br>
+            <br>    
+            <label for="psw">Password : </label>
+            <input type="password" name="" id="psw">
+            <br>    
+            <br>
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="blr">Blr</option>
+                <option value="bbsr">BBSR</option>
+                <option value="gj">Gujrat</option>
+            </select>
+            <br>
+            <br>
+            <input type="radio" name="gender" value="male" id="ml">
+            <label for="ml">Male</label>
+            <input type="radio" name="gender" value="female" id="fl">
+            <label for="ffl">Femle</label>
+            <br>
+            <br>
+            <input type="checkbox" name="term" id="terms">
+            <label for="terms">Agree Terms And Condition</label>
+            <br>
+            <br>
+            <button type="submit" id="sub">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let usName = document.querySelector('#usn')
+        let pswName = document.querySelector('#psw')
+        let formTg = document.querySelector('#form')
+        let submit = document.querySelector('#sub')
+
+        let cityval = document.querySelector('#city')
+        let termIpt = document.querySelector('#terms')
+
+        formTg.addEventListener('submit',function(e) {
+            e.preventDefault();
+            // console.log(e);     
+
+            let uname = usName.value;
+            let pname = pswName.value;
+            let city = cityval.value;
+            let gen = document.querySelector("input[name='gender']:checked").value;
+
+            console.log(termIpt.checked);
+            console.log(uname,pname,city,gen)
+        })
+
+
+    </script>
+</body>
+</html>

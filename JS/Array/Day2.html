@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [23,"42","R",32];
+        let size = arr.push(100);
+        console.log("size " +size); //  this way also we can get the size
+        console.log(arr);
+        arr.pop();
+        console.log(arr);
+        console.log("size " + arr.length);
+
+        arr.unshift(111);   // insert at begining element
+        console.log(arr);
+        arr.shift();    // remove begining element
+        console.log(arr);
+
+        let idx = arr.indexOf(23); // returns index of the element
+        console.log(idx);   // if present else it will return -1
+
+        arr.unshift(23);
+        console.log(arr);
+        let  lastIdx = arr.lastIndexOf(23)
+        console.log(lastIdx);
+
+
+    </script>
+</body>
+</html>

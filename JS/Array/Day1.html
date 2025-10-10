@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // literal way to create the array
+        // let arr = [];   
+        // or
+        let arr = [321,5,'ram',{'name':'rahul','roll': 3}];
+        console.log(arr);
+        arr[100] = 'kumar'  // we can store at any index any value
+        console.log(arr);
+        console.log(arr.length);
+        console.log(arr[55]);// if we try to fetch non initilised value it will give undefined 
+        // array creation using Array Constructor
+        let arr2 = new Array('rah',true, {'name':'abc','roll': 1}, 34);
+        console.log(arr2,arr[0]);
+
+
+        // if we set size oof array the rest element will be deleted
+        // for example
+        arr.length = 2;
+        console.log(arr,arr.length);   // after indx 2 element are droped
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let arr = [12,421,53,"ga"]
+        let nothing = arr.map(function(ele,idx,arrref){
+            console.log(ele,idx,arrref);
+            return ele*2;
+        })
+
+        console.log("The returned Array " +nothing); // map will return the array if return statement will be there
+
+        let nothing1 = arr.map(function(ele,idx,arrref){
+            console.log(ele,idx,arrref);
+        })
+        console.log(nothing1) // if we don't return anything in the function it will return the array of undefined of same size of previous array
+        
+
+    </script>
+  </body>
+</html>

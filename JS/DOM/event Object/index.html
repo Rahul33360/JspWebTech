@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object from addEventListener</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form action="" id="form">
+            <label for="usn">UserName : </label>
+            <input type="text" name="" id="usn">
+            <br>
+            <br>    
+            <label for="psw">Password : </label>
+            <input type="password" name="" id="psw">
+            <br>    
+            <br>
+            <button type="submit" id="sub">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let usName = document.querySelector('#usn')
+        let pswName = document.querySelector('#psw')
+        let formTg = document.querySelector('#form')
+        let submit = document.querySelector('#sub')
+
+        formTg.addEventListener('submit',function(e) {
+            e.preventDefault();
+            console.log(e);     
+
+            let uname = usName.value;
+            let pname = pswName.value;
+            console.log(uname,pname)
+        })
+
+
+    </script>
+</body>
+</html>

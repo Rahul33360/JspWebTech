@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- <p>Rahul</p> -->
+      <!-- space -->
+      <p>
+        Lorem ipsum dolor sit amet <span>THIS IS SPAN</span> consectetur
+        adipisicing elit. Quae, recusandae?
+      </p>
+
+      <div id="di"></div>
+    </div>
+
+    <script>
+      let wrap = document.querySelector("#wrapper");
+
+      // let divi = document.createElement('div');
+      let d = document.getElementById("di");
+      let htmlcode = `<table>
+            <thead>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Class</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>R</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                                <tr>
+                    <td>A</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>`;
+
+      d.innerHTML = htmlcode;
+
+      console.log(wrap.textContent);
+      console.log(wrap.innerText);
+      console.log(wrap.innerHTML);
+    </script>
+  </body>
+</html>
