@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrOfObj = [
+            {name:'Nike',id:101,category:'shoes',price:12999},
+            {name:'Bat',id:102,category:'sports',price:4999},
+            {name:'Helmet',id:105,category:'sports',price:2999},
+            {name:'Jordan',id:134,category:'shoes',price:112999},
+            {name:'ball',id:142,category:'sports',price:62999},
+            {name:'Skecher',id:164,category:'shoes',price:52999},
+            {name:'Laptop',id:140,category:'Electronics',price:2999}
+        ]
+
+        let shoesFil = arrOfObj.filter((ele) => {
+            return ele.category == 'shoes';
+        })
+        console.log(shoesFil);
+        
+        let sportsDetails = arrOfObj.filter((ele) =>{
+            return ele.category == 'sports'
+        })
+        console.log(sportsDetails);
+
+        let nonDetails = arrOfObj.filter((ele) =>{
+            return ele.category != 'sports' && ele.category != 'shoes' 
+        })
+        console.log(nonDetails);
+
+    </script>
+</body>
+</html>
