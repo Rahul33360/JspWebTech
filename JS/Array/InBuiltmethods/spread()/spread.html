@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4]   // what is this? -> some integer values we have wrapped in an array.
+        
+        let arr1=[345,8,5,43]
+        let arr2=[...arr,...arr1]   // this is spread operator. this will unwrap all the value and store in the array2
+        console.log(arr2);
+
+        // it will also work for objects
+        let obj1 = {
+            name:'Rahul',
+            id:101
+        }
+        let obj2 = {
+            address:'BLR'
+        }
+
+        let obj3 = {
+            ...obj1,
+            ...obj2,
+            loc:'marathalli',
+            ...arr2 // now this will be unwrapped(this is not any more an array) and now it is wrapped in object 
+        }
+
+        console.log(obj3);
+
+    </script>
+</body>
+</html>

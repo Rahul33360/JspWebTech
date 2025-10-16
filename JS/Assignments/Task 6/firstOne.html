@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f5f6fa;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px 30px;
+    }
+
+    /* Search */
+    #search {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    #search input {
+      width: 60%;
+      max-width: 600px;
+      border-radius: 25px;
+      padding: 10px 20px;
+      border: 3px solid #bd9e69;
+      transition: 0.3s;
+    }
+
+    #search input:focus {
+      outline: none;
+      border-color: #0d6efd;
+      box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+    }
+
+    /* Buttons */
+    #buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    #buttons .btn {
+      min-width: 130px;
+      font-weight: 500;
+      border-radius: 25px;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    #buttons .btn:hover {
+      transform: translateY(-3px);
+      scale: 1.2;
+    }
+
+    /* Table */
+    #tables table {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #tables th {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-warning container-fluid ">
+    <h3 class="ms-3 font-monospace fs-3 navbar-brand mb-0">
+      <span class="fs-1 ">J</span><span style="color: white;">Spider</span>
+    </h3>
+    <!-- <h3 class="m-2 text-white mb-0">Student Portal</h3> -->
+  </nav>
+
+  <div id="search">
+    <input type="text" class="form-control" placeholder="🔍 Search Student">
+  </div>
+
+  <div id="buttons" class="d-flex gap-5 mt-5">
+    <button type="button" class="btn btn-primary">All Students</button>
+    <button type="button" class="btn btn-warning">Male</button>
+    <button type="button" class="btn btn-secondary">Female</button>
+    <button type="button" class="btn btn-success">Pass</button>
+    <button type="button" class="btn btn-danger">Fail</button>
+  </div>
+
+  <div id="tables" class="mt-5">
+    <table class="table table-striped table-hover container text-center">
+      <thead class="table-warning">
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>GENDER</th>
+          <th>COURSE</th>
+          <th>SCORE</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</body>
+</html>
+
+    <script>
+        let stu1 = {
+            sid: 101,
+            sname: "atul",
+            sgender: "Male",
+            scourse: "JFS",
+            sscore: 7
+        }
+        let stu2 = {
+            sid: 102,
+            sname: "sam",
+            sgender: "Female",
+            scourse: "AWS",
+            sscore: 8
+        }
+        let stu3 = {
+            sid: 103,
+            sname: "rahul",
+            sgender: "Male",
+            scourse: "PFS",
+            sscore: 5
+        }
+        let stu4 = {
+            sid: 104,
+            sname: "Tamil",
+            sgender: "Male",
+            scourse: "JFS",
+            sscore: 9
+        }
+        let stu5 = {
+            sid: 105,
+            sname: "Rajji",
+            sgender: "Female",
+            scourse: "Testing",
+            sscore: 7
+        }
+        let stu6 = {
+            sid: 106,
+            sname: "Aksita",
+            sgender: "Male",
+            scourse: "JFS",
+            sscore: 4
+        }
+        let stu7 = {
+            sid: 107,
+            sname: "Aishwarya",
+            sgender: "Female",
+            scourse: "Devops",
+            sscore: 8
+        }
+        let stu8 = {
+            sid: 108,
+            sname: "Nakul",
+            sgender: "Male",
+            scourse: "JFS",
+            sscore: 9
+        }
+        let stu9 = {
+            sid: 109,
+            sname: "Sangvi",
+            sgender: "Female",
+            scourse: "Mern",
+            sscore: 10
+        }
+        let stu10 = {
+            sid: 110,
+            sname: "Ram",
+            sgender: "Male",
+            scourse: "JFS",
+            sscore: 8
+        }
+
+        let stu = [stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8, stu9, stu10]
+
+        let table = document.querySelector("table");
+
+        let tbody = document.createElement("tbody");
+        tbody.classList.add("text-center");
+
+
+        function displayData(data) {
+
+            tbody.innerHTML = "";
+
+            data.forEach(s => {
+                let tr = document.createElement("tr");
+                tr.innerHTML = `
+      <td>${s.sid}</td>
+      <td>${s.sname}</td>
+      <td>${s.sgender}</td>
+      <td>${s.scourse}</td>
+      <td>${s.sscore}</td>
+    `;
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(tbody);
+        }
+
+        document.querySelector(".btn-primary").addEventListener(
+            "click", () => displayData(stu));
+        document.querySelector(".btn-warning").addEventListener(
+            "click", () => displayData(stu.filter(s => s.sgender === "Male")));
+        document.querySelector(".btn-secondary").addEventListener(
+            "click", () => displayData(stu.filter(s => s.sgender === "Female")));
+        document.querySelector(".btn-success").addEventListener(
+            "click", () => displayData(stu.filter(s => s.sscore >= 7)));
+        document.querySelector(".btn-danger").addEventListener(
+            "click", () => displayData(stu.filter(s => s.sscore < 7)));
+    </script>
+</body>
+
+</html>

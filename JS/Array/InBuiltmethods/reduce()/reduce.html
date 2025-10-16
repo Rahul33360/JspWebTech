@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [21,-53,2,-51,15,43,-6,-3]
+        let val = arr.reduce(function(acc,idx){
+            let sum = acc+idx;
+            return sum;
+        },100)  // this 100 is arg2 value
+
+        console.log(val);
+        //  or using arrow function
+        let val2 = arr.reduce((acc,idx)=>acc+idx, 22) // this 100 is arg2 value
+
+        console.log(val2);
+
+    </script>
+</body>
+</html>
