@@ -93,7 +93,14 @@
       .form-check-input {
         cursor: pointer;
       }
-
+      .btn-primary:hover{
+        background-color:darkseagreen;
+        color: black;
+      }
+      .btn-warning:hover{
+        background-color:tan;
+        color: #333;
+      }
       .completed {
         text-decoration: line-through;
         color: gray;
@@ -127,6 +134,8 @@
       let taskArr = JSON.parse(localStorage.getItem("arr")) || [];
       let formSub = document.getElementById("todoForm");
       let displayTask = document.getElementById("taskList");
+      let addBtn = formSub.querySelector("button");
+      let editIndex = null;
 
       function display(tasks) {
         displayTask.innerHTML = "";
@@ -135,66 +144,71 @@
           li.className =
             "list-group-item d-flex justify-content-between align-items-center";
           li.innerHTML = `
-            <div>
-              <input type="checkbox" class="form-check-input me-3" ${
-                item.isCheck ? "checked" : ""
-              }>
-              <span class="${item.isCheck ? "completed" : ""}">${item.list}</span>
-            </div>
-            <div>
-              <button class="btn btn-primary btn-sm me-1 edit"><i class="bi bi-pencil"></i></button>
-              <button class="btn btn-warning btn-sm delete"><i class="bi bi-trash3"></i></button>
-            </div>
-          `;
+        <div>
+          <input type="checkbox" class="form-check-input me-3" ${
+            item.isCheck ? "checked" : ""
+          }>
+          <span class="${item.isCheck ? "completed" : ""}">${item.list}</span>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm me-1 edit"><i class="bi bi-pencil"></i></button>
+          <button class="btn btn-warning btn-sm delete"><i class="bi bi-trash3"></i></button>
+        </div>
+      `;
           displayTask.appendChild(li);
 
-          li.querySelector(".form-check-input").addEventListener("change", () => {
-            item.isCheck = !item.isCheck;
+          li.querySelector(".form-check-input").addEventListener(
+            "change",
+            () => {
+              item.isCheck = !item.isCheck;
+              localStorage.setItem("arr", JSON.stringify(tasks));
+              display(tasks);
+            }
+          );
+
+          li.querySelector(".delete").addEventListener("click", () => {
+            tasks.splice(index, 1);
             localStorage.setItem("arr", JSON.stringify(tasks));
             display(tasks);
           });
 
-        //   li.querySelector(".delete").addEventListener("click", () => {
-        //     tasks.splice(index, 1);
-        //     localStorage.setItem("arr", JSON.stringify(tasks));
-        //     display(tasks);
-        //   });
+          li.querySelector(".edit").addEventListener("click", () => {
+            task.value = item.list;
 
-        //   li.querySelector(".edit").addEventListener("click", () => {
-        //     const newTask = prompt("Edit task:", item.list);
-        //     if (newTask !== null && newTask.trim() !== "") {
-        //       item.list = newTask.trim();
-        //       localStorage.setItem("arr", JSON.stringify(tasks));
-        //       display(tasks);
-        //     }
-        //   });
+            addBtn.textContent = "Update";
+            editIndex = index;
+            task.focus(); 
+          });
         });
-      }
-
-      function check(val) {
-        let objValue = JSON.parse(localStorage.getItem("arr"));
-        
-        // let isPresent = objValue.find(ele => {
-
-        // })
       }
 
       formSub.addEventListener("submit", (e) => {
         e.preventDefault();
         let val = task.value.trim();
-        if (val !== "" && check(val)) {
+
+        if (val === "") {
+          alert("❌ Please enter the value!");
+          return;
+        }
+
+        if (editIndex !== null) {
+          // Update existing task
+          taskArr[editIndex].list = val;
+          editIndex = null;
+          addBtn.textContent = "Add";
+        } else {
+          // Add new task
           let newObj = {
             list: val,
             id: Math.trunc(Math.random() * 100),
             isCheck: false,
           };
           taskArr.push(newObj);
-          task.value = "";
-          localStorage.setItem("arr", JSON.stringify(taskArr));
-          display(taskArr);
-        } else {
-          alert("❌ Please enter a valid task!");
         }
+
+        task.value = "";
+        localStorage.setItem("arr", JSON.stringify(taskArr));
+        display(taskArr);
       });
 
       display(taskArr);
