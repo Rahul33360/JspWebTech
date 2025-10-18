@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="wrapper m-10">
+      <!-- // contents will be here -->
+      <form action="" method="get">
+        <input type="text" id="tagVal" placeholder="Enter Tag" />
+        <br /><br />
+        <input type="text" id="messageVal" placeholder="Enter Message" />
+        <br /><br />
+        <button id="click" class="btn btn-success" type="submit">Create</button>
+      </form>
+    </div>
+
+    <!-- <label for=""></label> -->
+
+    <script>
+      let parentEle = document.querySelector("#wrapper");
+      let tagVal = document.querySelector("#tagVal");
+      let messageVal = document.querySelector("#messageVal");
+      let click = document.querySelector("#click");
+
+      click.addEventListener("click", (e) => {
+        e.preventDefault();
+        let createEle = document.createElement(tagVal.value);
+        createEle.textContent = messageVal.value;
+        parentEle.appendChild(createEle);
+        tagVal.value = "";
+        messageVal.value = "";
+      });
+
+      /* 
+        let parentEle = document.querySelector('#wrapper');
+        let tagVal = document.querySelector('#tagVal');
+        let messageVal = document.querySelector('#messageVal');
+        let click = document.querySelector('#click')
+        
+        let createEle = document.createElement(tagVal);
+
+
+        click.addEventListener((e) => {
+            e.preventDafault();
+            createEle.appendChild(messageVal)
+            parentEle.appendChild(createEle)
+            console.log(parentEle);
+        })
+ */
+
+      /*
+        let parentEle = document.querySelector('#wrapper');
+
+        // let h1Tag = document.createElement('h1');
+        // h1Tag.innerText = 'h1 injected from JS'
+        // parentEle.appendChild(h1Tag)
+ 
+        let tagInput = document.createElement('input')
+        let tagInputLabel = document.createElement('label')
+        let labelVal = 'Enter Tag'
+        tagInputLabel.innerText = labelVal
+        tagInputLabel.appendChild(labelVal)
+        // parentEle.appendChild(tagInput)
+        parentEle.appendChild(tagInputLevel)
+ */
+    </script>
+  </body>
+</html>

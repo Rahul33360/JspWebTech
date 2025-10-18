@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+</head>
+<body>
+    
+    <script type="module">  // to import this is mandatory -> type="module"
+        import multiply from './two.js'
+        import  {msg,divide} from './two.js'  // curly bracket is mandatoy for importing named type module
+        import {add,newVar} from './three.js'
+        
+
+        console.log(multiply(2,3))
+        console.log(add(2,3))
+       // console.log(sub(2,3))
+        console.log(divide(21,3))
+
+        console.log(msg)
+        console.log(newVar)
+
+
+
+    </script>
+
+</body>
+</html>
