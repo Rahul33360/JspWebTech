@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt();
+      let age = +prompt();
+      console.log("Hello ");
+      setTimeout(
+        function (name, age) {
+          console.log(`your name is ${name} and your age is ${age} `);
+        },
+        3000,
+        name,
+        age
+      );
+      console.log("Last Line running of js");
+        
+
+    </script>
+  </body>
+</html>

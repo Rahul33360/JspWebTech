@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(function() {
+            console.log('Hello Rahul');
+        },1000) // after 1sec it will print hello rahul
+        
+        let cnt = 3;
+        let id = setInterval(function(){
+            console.log(cnt);
+            cnt--;
+        },2000) // after every 2 sec it wil run and keep on running until i stop it.
+
+
+        // to stop we can use a techinque ad mixed with setTimeOut HOF 
+        // we will store set Interval id and we use that to make it stop
+        setTimeout(function(){
+            console.log('Stopping the setInterval Higher Order Function (HOF) after 10sec');
+            clearInterval(id);  // this will stop the setInterval HOF
+        },10000)    // this will run after 10sec. then clearInterval(id) will run and stop the setInterval HOF
+
+        // we have one more but not in use
+        // clearTimeOut for setTimeOut
+
+        
+
+
+    </script>
+</body>
+</html>
