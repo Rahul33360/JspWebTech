@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+             /*
+             let promise1 = fetch('https://jsonplaceholder.typicode.com/todos')
+
+             let jsonObj = promise1.then((data) => data.json());
+             jsonObj.then((jsObj) => console.log(jsObj))
+      */
+        async function fetchData() {
+          try {
+            let promise = await fetch('https://jsonplaceholder.typicode.com/todos')
+            let res = await promise.json();
+            console.log(res);     
+          } catch (error) {
+            console.log(error);
+          }       
+        }
+
+        fetchData();
+        console.log("hello");
+
+
+    </script>
+  </body>
+</html>
