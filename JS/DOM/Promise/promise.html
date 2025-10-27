@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        
+      let p1 = new Promise(function() {
+          console.log("Executer Function");
+      })
+      console.log(p1);
+
+      let data=true;
+      let p2 = new Promise((success, failure) => {
+          if(data)
+              success('Data is Resolved')
+          else
+              failure('Data Failed')
+      })
+      console.log(p2);
+
+
+      let da=false;
+      let p3 = new Promise((suc, fail) => {
+          if(da)
+              suc('Data is Resolved')
+          else
+              fail('Data Failed')
+      })
+      console.log(p3);
+
+
+      let p4 = new Promise((resolve, reject) => { // resolve, reject -> any name can be here
+          let val = true
+          if(val)
+              resolve([10,20,30,40])
+          else
+              reject('Data rejected')
+      })
+      console.log(p4);
+
+      // this p4 promise is returning some data so if we want to consume or collect it. we use then and catch block (it is similar like try catch in java). then and catch block will accept callback funciton. so we passing in here a arrow function which will be called automatically and in that newData will store the data, returning from the Promise. and printing it 
+
+      p4.then((newData)=>console.log(newData)).catch((err)=>console.error(err))
+
+
+
+      let p5 = new Promise((resolve, reject) => { // resolve, reject -> any name can be here
+          let val = false
+          if(val)
+              resolve([10,20,30,40])
+          else
+              reject('Data rejected')
+      })
+      console.log(p5)
+
+      p5.then((newData)=>console.log(newData)).catch((err)=>console.error(err))
+
+
+        let p6 = new Promise((resolve, reject) => { // resolve, reject -> any name can be here
+          let val = true
+          if(val)
+              resolve(10)
+          else
+              reject('Data rejected')
+      })
+      console.log('p6')
+
+      p6.then((newData)=>newData*2).then((newData2)=> newData2+20).then((newData3)=>console.log(newData3)).catch((err)=>console.error(err))
+
+
+      
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
