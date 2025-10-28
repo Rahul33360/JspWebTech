@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #g-parent {
+        height: 300px;
+        width: 300px;
+        background-color: rosybrown;
+        padding: 20px;
+      }
+      #parent {
+        height: 200px;
+        width: 200px;
+        background-color: blueviolet;
+        padding: 20px;
+      }
+      #child {
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="g-parent">
+      <div id="parent">
+        <div id="child"></div>
+      </div>
+    </div>
+
+    <script>
+      let g_parent = document.getElementById("g-parent");
+      let parent = document.getElementById("parent");
+      let child = document.getElementById("child");
+
+      g_parent.addEventListener(
+        "click",
+        function () {
+          console.log("g_parent is called");
+        },
+        false
+      );
+
+      parent.addEventListener(
+        "click",
+        function () {
+          console.log("parent is called");
+        },
+        false
+      );
+
+      child.addEventListener(
+        "click",
+        function () {
+          console.log("child is called");
+        },
+        false
+      );
+
+      //when i will click on child it will print this
+      
+      /* 
+      if clicked on child :-
+        child is called
+        parent is called
+        g_parent is called
+
+
+      if clicked on parent :-
+        parent is called
+        g_parent is called
+
+ */
+    </script>
+  </body>
+</html>
