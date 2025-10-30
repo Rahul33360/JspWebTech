@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // function Constructor
+      function Student(name, id) {
+        this.name = name;   // here one name variable created and binded to this keyward(where this is pointing to s1) then local variable's value will be assigned to this created name
+        this.id = id;   // same concept like above
+      }
+
+      let s1 = new Student('ram',1);
+      console.log(s1);
+
+      let s2 = new Student('shyam',2);
+      console.log(s2);
+
+    </script>
+  </body>
+</html>

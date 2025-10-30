@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if i create any object or any array by default there will  be one prototype will be binded(attached)
+
+      //  for object
+      let obj1 = { name: "rahul", age: 22, sal: 200000 };
+      console.log(obj1);
+      console.log(obj1.__proto__);
+      console.log(obj1.__proto__.__proto__);
+
+      console.log(Object); // this is global Object in Js
+      console.log(Object.__proto__.__proto__.__proto__);
+
+      // for Arrays
+      console.log("Arrays from here -----");
+      let arr1 = ["rahul", 22, 200000];
+      console.log(arr1);
+      console.log(arr1.__proto__);
+      console.log(arr1.__proto__.__proto__);
+      console.log(arr1.__proto__.__proto__.__proto__);
+
+    </script>
+  </body>
+</html>

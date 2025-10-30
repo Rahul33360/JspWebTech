@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Dishes</title>
+    <style>
+      body {
+        margin: 20px;
+        background-color: cadetblue;
+      }
+      input,
+      select,
+      button {
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .inputs{
+        border-radius: 8px;
+        border: none;
+        scale: 1.2;
+        margin: 10px;
+      }
+      .inputs:hover{
+        background-color: lightgray;
+
+      }
+      .contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .heading{
+        font-size: 50px;
+        color: rgb(244, 100, 148);
+      }
+      .form{
+        display: flex;
+        flex-direction: column;
+
+      }
+      .btn{
+        border-radius: 8px;
+        scale: 1.2;
+      }
+      .item {
+        padding: 6px 10px;
+        margin: 4px 0;
+        background: #f5f5f5;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .item:hover {
+        background: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <h2 class="heading">Welcome Owner</h2>
+
+      <div class="form">
+        <input class="inputs" type="text" id="dName" placeholder="Dish Name" />
+        <input class="inputs" type="number" id="dPrice" placeholder="Dish Price" />
+        <select class="inputs" id="dType">
+          <option value="veg">Veg</option>
+          <option value="nonveg">Non-Veg</option>
+        </select>
+        <button class="btn" onclick="addDish()">Add Dish</button>
+      </div>
+      
+      <div class="container">
+        <div class="section" id="vegSection">
+          <h3>Veg Dishes</h3>
+          <div id="vegList"></div>
+        </div>
+        <div class="section" id="nonVegSection">
+          <h3>Non-Veg Dishes</h3>
+          <div id="nonVegList"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const dName = document.getElementById("dName");
+      const dPrice = document.getElementById("dPrice");
+      const dType = document.getElementById("dType");
+      const vegList = document.getElementById("vegList");
+      const nonVegList = document.getElementById("nonVegList");
+
+      function addDish() {
+        const name = dName.value;
+        const price = dPrice.value;
+        const type = dType.value;
+
+        const item = document.createElement("div");
+
+        item.id = "item";
+        item.textContent = `${name} - ${price}`;
+
+        item.addEventListener("click", function () {
+          edit(item);
+        });
+
+        if (type === "veg") {
+          vegList.appendChild(item);
+        } else {
+          nonVegList.appendChild(item);
+        }
+
+        dName.value = "";
+        dPrice.value = "";
+      }
+
+      function edit(item) {
+        const oldText = item.textContent;
+        const [oldName, oldPrice] = oldText.split(" - ");
+
+        const inputName = document.createElement("input");
+        inputName.value = oldName;
+        const inputPrice = document.createElement("input");
+        inputPrice.type = "number";
+        inputPrice.value = oldPrice;
+
+        item.innerHTML = "";
+        item.appendChild(inputName);
+        item.appendChild(inputPrice);
+        inputName.focus();
+
+        function save() {
+          const newName = inputName.value;
+          const newPrice = inputPrice.value;
+          if (newName && newPrice) {
+            item.textContent = `${newName} : ₹${newPrice}`;
+          } else {
+            item.textContent = oldText;
+          }
+        }
+
+        item.addEventListener("click", function () {
+          edit(item);
+        });
+
+        inputPrice.addEventListener("blur", save);
+        inputPrice.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") save();
+        });
+      }
+    </script>
+  </body>
+</html>

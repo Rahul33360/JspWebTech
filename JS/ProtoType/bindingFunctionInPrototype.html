@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(name,year) {
+            this.name = name;
+            this.year = year;
+        }
+
+        // below here we are attaching the calcAge function to the object. (we can use only function declearation and function Expression with prototype)
+        Student.prototype.calcAge = function() {
+            let currYear = new Date().getFullYear();
+            let age = currYear-this.year;
+            console.log(`${this.name} having age ${age}`);
+        }
+
+        let s1 = new Student('ram',1990);
+        console.log(s1); // if u see in prototype of this object we will be having one calcAge function attached to it.
+        // lets call it
+        s1.calcAge()
+        s1.prototype.calcAge
+
+        let s2 = new Student('shyam',2020);
+        console.log(s2);
+        s2.calcAge();
+
+
+    </script>
+</body>
+</html>
